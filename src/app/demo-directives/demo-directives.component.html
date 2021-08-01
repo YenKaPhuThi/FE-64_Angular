@@ -1,0 +1,39 @@
+<!-- Demo Ng If dùng để ẩn hiện phần tử -->
+
+<p *ngIf="isFine; else elseContent">Go to Cybersoft</p>
+<!-- <p *ngIf="!isFine">Go to Cybercore</p> -->
+
+<ng-template #elseContent>
+  <p>Go to Cybercore</p>
+</ng-template>
+
+<button (click)="handleMakeDecision(true)">Fine</button>
+<button (click)="handleMakeDecision(false)">Sick</button>
+
+<br>
+<hr />
+<!-- Demo Ng Switch -->
+
+<select (change)="handleChangeMonth()" [(ngModel)]="month">
+  <option value="0">Chọn tháng</option>
+  
+  <!-- Demo Ng For: lặp phần tử -->
+  <!-- ng-container: kg hiện ra giao diện -->
+  <ng-container *ngIf="isFine">
+    <option *ngFor="let item of monthOptions" [value]="item.value" >{{item.label}}</option>
+  </ng-container>
+</select>
+
+<div [ngSwitch]="month">
+  <p *ngSwitchCase="1">Tháng 1 có 31 ngày</p>
+  <p *ngSwitchCase="2">Tháng 2 có 28 ngày</p>
+  <p *ngSwitchCase="3">Tháng 3 có 31 ngày</p>
+  <p *ngSwitchCase="4">Tháng 4 có 30 ngày</p>
+  <p *ngSwitchDefault>Tháng không hợp lệ</p>
+</div>
+
+<!-- Demo NgClass: add class theo điều kiện nào đó -->
+<button class="btn btn-secondary" [ngClass]="{'btn-success': isBooking}" (click)="handleSelect()">Ghế 1</button>
+
+<!-- Demo NgStyle: Dynamic style -->
+<div [ngStyle]="{'background-color': bgColor}" style="width: 300px; height: 150px; border: 1px solid #000; background-color: greenyellow;"></div>

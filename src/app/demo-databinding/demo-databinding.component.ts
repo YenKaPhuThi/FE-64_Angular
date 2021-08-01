@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DemoDatabindingComponent implements OnInit {
   // Tat ca cac bien la state, An auto detection
   fullName: string = 'Ka Phu Thi Yen';
-  age: number = 25;
+  age: number = 28;
 
   imgSrc: string = 'https://picsum.photos/200/300';
   

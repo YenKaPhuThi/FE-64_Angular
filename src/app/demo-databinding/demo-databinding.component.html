@@ -9,4 +9,7 @@
 
 <!-- Event binding: Gan su kien cho the -->
 <button (click)="setFullName()">Set Fullname</button>
-<input (input)="setAge($event)" placeholder="Age" [value]="age" type="text" />
+<!-- <input (input)="setAge($event)" placeholder="Age" [value]="age" type="text" /> -->
+
+<!-- Two way binding -->
+<input placeholder="age" [(ngModel)]="age" />
