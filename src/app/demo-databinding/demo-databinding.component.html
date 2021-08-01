@@ -1,0 +1,12 @@
+<!-- Interpolation -->
+<h1>Fullname: {{fullName}}</h1>
+<h2>Age: {{age}}</h2>
+
+<!-- Propperty binding: binding du lieu vao thuoc tinh the [thuoc tinh] -->
+<img [src]="imgSrc" alt="">
+<br />
+<input [value]="fullName" />
+
+<!-- Event binding: Gan su kien cho the -->
+<button (click)="setFullName()">Set Fullname</button>
+<input (input)="setAge($event)" placeholder="Age" [value]="age" type="text" />
