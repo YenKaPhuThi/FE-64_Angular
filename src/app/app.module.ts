@@ -12,6 +12,10 @@ import { DemoDatabindingComponent } from './demo-databinding/demo-databinding.co
 import { DemoDirectivesComponent } from './demo-directives/demo-directives.component';
 import { Ex2HomeComponent } from './Ex2/ex2-home/ex2-home.component';
 import { Ex3HomeComponent } from './Ex3/ex3-home/ex3-home.component';
+import { StudentListComponent } from './StudentManagement/student-list/student-list.component';
+import { StudentItemComponent } from './StudentManagement/student-item/student-item.component';
+import { BookingComponent } from './BookingSeat/booking/booking.component';
+import { SeatComponent } from './BookingSeat/seat/seat.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { Ex3HomeComponent } from './Ex3/ex3-home/ex3-home.component';
     DemoDirectivesComponent,
     Ex2HomeComponent,
     Ex3HomeComponent,
+    StudentListComponent,
+    StudentItemComponent,
+    BookingComponent,
+    SeatComponent,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],

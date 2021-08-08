@@ -1,0 +1,15 @@
+<h1 class="text-center">Student List</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3" *ngFor="let item of students">
+      <app-student-item (selectStudent)="setSelectedStudent($event)" (selectHightSQualitytudent)="setselectHightQualityStudent($event)" [student]="item"></app-student-item>
+    </div>
+  </div>
+  <!-- ? : optional chaining -->
+  <div>Sinh viên xuất sắc của lớp: {{selectedStudent?.name}}</div>
+  <hr />
+  <h3>Danh sách sinh viên chất lượng cao: </h3>
+  <p *ngFor="let item of hightQuanlityStudents">
+    {{item.name}}
+  </p>
+</div>

@@ -1,0 +1,19 @@
+<div class="container bg-grey">
+  <h1 class="text-uppercase text-warning">Đặt vé xe hãng Yến Ka</h1>
+  <div class="row">
+    <div class="col-7">
+      <div class="bg-dark text-white text-center py-2">Tài xế</div>
+      <div class="row">
+        <div class="col-3" *ngFor="let item of seatList" >
+          <app-seat [seat]="item" (selectSeat)="setSelectedSeat($event)"></app-seat>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-5">
+      <h3 class="text-warning">Danh sách ghế đã đặt (0)</h3>
+      <p class="text-mute" *ngFor="let item of selectedSeat">Số ghế {{item?.SoGhe}} ${{item?.Gia}} <span (click)="cancleSeat(item.SoGhe)" class="text-warning" style="cursor: pointer;">[Hủy]</span></p>
+    </div>
+  </div>
+  <div></div>
+</div>
